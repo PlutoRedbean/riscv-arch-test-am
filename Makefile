@@ -45,7 +45,7 @@ Makefile.%: $$(call find_src,%)
 NAME = $*\n\
 SRCS = $<\n\
 INC_PATH += $(shell pwd)/riscv-test-suite/env\n\
-include $${AM_HOME}/Makefile" > $@
+include $${MUNDUS_HOME}/abstract-machine/Makefile" > $@
 	@if make -s -f $@ ARCH=$(ARCH) $(MAKECMDGOALS); then \
 		printf "[%14s] $(COLOR_GREEN)PASS$(COLOR_NONE)\n" $* >> $(RESULT); \
 	else \
